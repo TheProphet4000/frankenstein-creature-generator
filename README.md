@@ -1,2 +1,2 @@
 # Creature body simulator
- This project is a programming exercise where i want to simulate a creatures body, ie mammal
+ This project is an exercise where i want to generate creatures from a list of bodyparts
