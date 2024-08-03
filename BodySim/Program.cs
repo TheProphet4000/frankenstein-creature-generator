@@ -1,36 +1,59 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.Automation;
+using System.Diagnostics; //for test purposes, delete later
 
 namespace BodySim
 {
     internal static class Program
     {
-        class Car
-        {
-            public static string model;
-            public static string color;
-            public static int year;
-
-            public static Car(string modelName, string modelColor, int modelYear)
-            {
-                model = modelName;
-                color = modelColor;
-                year = modelYear;
-            }
-        }
-
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
-            Console.WriteLine(Car.model);
+            //ShowCreatures();
+            Application.Run(new Form1()); //code after this doesn't work.. idk why
+        }
+
+        /*
+        static void ShowCreatures() //make an array and add creatures from a contructor called CreatureGen
+        {
+            object[] creatures;
+
+            for (int i = 0; i < 2; i++)
+            {
+                creatures[i] = new CreatureGen("Sharkman", "red");
+            }
+        }
+        */
+
+
+        //GPTs answer below
+        public class ObjectArray
+        {
+            public object[] Creatures { get; private set; }
+
+            public ObjectArray(params object[] creatures)
+            {
+                Creatures = new object[creatures.Length];
+                for (int i = 0; i < creatures.Length; i++)
+                {
+                    Creatures[i] = creatures[i];
+                }
+            }
+            public void PrintObjects()
+            {
+                foreach (var obj in Creatures)
+                {
+                    Debug.WriteLine(obj);
+                }
+            }
         }
     }
 }
