@@ -2,13 +2,14 @@
 {
     class CreatureGen
     {
-        private string name;
-        private string color;
+        private static string name, color, creature;
 
-        public CreatureGen(string creatureName, string creatureColor)
+        public static string CreatureBase(string creatureName, string creatureColor)
         {
             name = creatureName;
             color = creatureColor;
+            creature = creatureColor + creatureName;
+            return creature;
         }
     }
 }
