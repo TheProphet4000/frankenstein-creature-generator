@@ -12,8 +12,6 @@ namespace BodySim
 {
     internal static class Generator
     {
-        static string[] creatures;
-
         [STAThread]
         static void Main()
         {
@@ -22,10 +20,15 @@ namespace BodySim
             ShowCreatures();
             Application.Run(new Form1()); //code after this doesn't work.. idk why
         }
-        static void ShowCreatures() //make an array and add a creature
+        static void ShowCreatures() //makes an array and add a creature
         {
-            string gen = CreatureGen.CreatureBase("Sharkman", "purple ");
-            Debug.WriteLine(gen);
+            string[] creatures = new string [5];
+            for (int i = 0; i < creatures.Length; i++)
+            {
+                creatures[i] = CreatureGen.CreatureBase("Sharkman", "purple ");
+                Debug.WriteLine(creatures[i]);
+            }
+            
         }
     }
 }
