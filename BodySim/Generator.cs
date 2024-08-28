@@ -18,7 +18,7 @@ namespace BodySim
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             ShowCreatures();
-            Application.Run(new Form1()); //code after this doesn't work.. idk why
+            Application.Run(new Interface()); //code after this doesn't work.. idk why
         }
         static void ShowCreatures() //makes an array and add a creature
         {
