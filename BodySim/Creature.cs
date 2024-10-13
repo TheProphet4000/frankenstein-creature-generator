@@ -2,13 +2,21 @@
 {
     class Creature
     {
-        private static string name, color, creature;
+        private static string name, color, head, arms, torso, legs, tail, hands, feet, creature ;
 
-        public static string CreatureBase(string creatureName, string creatureColor)
+        public static string CreatureBase(string creatureName, string creatureColor, string creatureHead, string creatureArms, string creatureTorso, string creatureLegs, string creatureTail, string creatureHands, string creatureFeet)
         {
             name = creatureName;
             color = creatureColor;
-            creature = creatureColor + creatureName;
+            head = creatureHead;
+            arms = creatureArms;
+            torso = creatureTorso;
+            legs =  creatureLegs;
+            tail = creatureTail;
+            hands = creatureHands;
+            feet = creatureFeet;
+
+            creature = name + color + head + arms + torso + legs + tail + hands + feet;
             return creature;
         }
     }

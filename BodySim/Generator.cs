@@ -25,7 +25,7 @@ namespace BodySim
             string[] creatures = new string [5];
             for (int i = 0; i < creatures.Length; i++)
             {
-                creatures[i] = Creature.CreatureBase("Sharkman", "purple ");
+                creatures[i] = Creature.CreatureBase("Eric", "purple","rat","monkey","whale","squrrel","cat","bear","frog");
                 Debug.WriteLine(creatures[i]);
             }
             
