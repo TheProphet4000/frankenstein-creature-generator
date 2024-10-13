@@ -1,6 +1,6 @@
 ﻿namespace BodySim
 {
-    class CreatureGen
+    class Creature
     {
         private static string name, color, creature;
 

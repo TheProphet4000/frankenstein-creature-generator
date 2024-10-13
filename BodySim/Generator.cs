@@ -17,15 +17,15 @@ namespace BodySim
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            ShowCreatures();
+            creatureGen();
             Application.Run(new Interface()); //code after this doesn't work.. idk why
         }
-        static void ShowCreatures() //makes an array and add a creature
+        static void creatureGen() //makes an array and generate creatures
         {
             string[] creatures = new string [5];
             for (int i = 0; i < creatures.Length; i++)
             {
-                creatures[i] = CreatureGen.CreatureBase("Sharkman", "purple ");
+                creatures[i] = Creature.CreatureBase("Sharkman", "purple ");
                 Debug.WriteLine(creatures[i]);
             }
             
